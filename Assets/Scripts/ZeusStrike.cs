@@ -27,13 +27,13 @@ public class ZeusStrike : MonoBehaviour
             .Sequence()
             .AppendCallback(() =>
             {
-                lightningBolt.enabled = true;
+                lightningBolt.gameObject.SetActive(true);
             })
             .Append(boltEnd.DOMove(strikePosition, strikeLength))
             .Append(boltEnd.DOMove(boltStart.position, strikeLength))
             .AppendCallback(() =>
             {
-                lightningBolt.enabled = false;
+                lightningBolt.gameObject.SetActive(false);
             })
             .Play();
     }

@@ -22,7 +22,9 @@ public class Menu : MonoBehaviour
     private RectTransform zeus;
 
     [SerializeField]
-    private RectTransform howTo;
+    private AudioClip music;
+
+    private AudioSource musicPlayer;
 
     private void Awake()
     {
@@ -32,15 +34,40 @@ public class Menu : MonoBehaviour
 
     private void Start()
     {
-        UpdateIcons();
         zeus.DOAnchorPosX(0, 0.4f).Play();
         appName.text = Application.productName;
+        GameObject[] players = GameObject.FindGameObjectsWithTag("MusicPlayer");
+
+        if (players.Length == 0)
+        {
+            GameObject mPlayer = Instantiate(new GameObject("MusciPlayer"));
+            mPlayer.tag = "MusicPlayer";
+            musicPlayer = mPlayer.AddComponent<AudioSource>();
+            musicPlayer.clip = music;
+            musicPlayer.playOnAwake = false;
+            musicPlayer.volume = 0.5f;
+            DontDestroyOnLoad(mPlayer);
+        }
+        else
+        {
+            musicPlayer = FindFirstObjectByType<AudioSource>();
+        }
+        UpdateIcons();
     }
 
     private void UpdateIcons()
     {
-        soundIcon.sprite = soundSprites[PlayerPrefs.GetInt("Sound", 1)];
+        int sound = PlayerPrefs.GetInt("Sound", 1);
+        soundIcon.sprite = soundSprites[sound];
         vibroIcon.sprite = vibroSprites[PlayerPrefs.GetInt("Vibration", 1)];
+        if (sound == 1)
+        {
+            musicPlayer.Play();
+        }
+        else
+        {
+            musicPlayer.Pause();
+        }
     }
 
     public void UpdateSettings(string settings)
@@ -53,15 +80,5 @@ public class Menu : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("GameScene");
-    }
-
-    public void ShowHow()
-    {
-        howTo.DOAnchorPosX(0, 0.5f).Play();
-    }
-
-    public void HideHow()
-    {
-        howTo.DOAnchorPosX(1500, 0.5f).Play();
     }
 }
