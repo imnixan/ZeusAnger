@@ -16,8 +16,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        Application.targetFrameRate = 300;
-        Screen.orientation = ScreenOrientation.LandscapeLeft;
         bestScores = PlayerPrefs.GetInt("BestScores");
         guiManager = GetComponent<GuiManager>();
     }
@@ -35,16 +33,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void DinoBoom(float height)
+    public void DinoBoom()
     {
-        if (height > 0)
-        {
-            scores += FlyinPrice;
-        }
-        else
-        {
-            scores += WalkinPrice;
-        }
+        scores += WalkinPrice;
+
         guiManager.UpdateScores(scores);
         if (scores > bestScores)
         {

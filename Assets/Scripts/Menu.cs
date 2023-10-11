@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class Menu : MonoBehaviour
 {
@@ -13,15 +14,19 @@ public class Menu : MonoBehaviour
     private Sprite[] soundSprites,
         vibroSprites;
 
+    [SerializeField]
+    private RectTransform zeus;
+
     private void Awake()
     {
         Application.targetFrameRate = 300;
-        Screen.orientation = ScreenOrientation.LandscapeLeft;
+        Screen.orientation = ScreenOrientation.Portrait;
     }
 
     private void Start()
     {
         UpdateIcons();
+        zeus.DOAnchorPosX(0, 0.4f).Play();
     }
 
     private void UpdateIcons()

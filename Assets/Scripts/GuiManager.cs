@@ -44,7 +44,7 @@ public class GuiManager : MonoBehaviour
 
     public void HideHeart(int heartsLeft)
     {
-        hearts[heartsLeft].DOJumpAnchorPos(new Vector2(0, -50), 50, 1, 0.5f).Play();
+        hearts[heartsLeft].DOJumpAnchorPos(new Vector2(-500, 0), 50, 1, 0.5f).Play();
     }
 
     public void UpdateScores(int scores)
@@ -61,6 +61,7 @@ public class GuiManager : MonoBehaviour
 
     public void EndGame()
     {
+        StopAllCoroutines();
         if (star.sprite == recordSprite)
         {
             finalStar.sprite = recordSprite;
