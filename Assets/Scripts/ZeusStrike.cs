@@ -41,10 +41,12 @@ public class ZeusStrike : MonoBehaviour
     private void OnEnable()
     {
         Enemy.ElementalStrike += OnBoltStrike;
+        Jerry.JerryStrike += OnBoltStrike;
     }
 
     private void OnDisable()
     {
         Enemy.ElementalStrike -= OnBoltStrike;
+        Jerry.JerryStrike -= OnBoltStrike;
     }
 }

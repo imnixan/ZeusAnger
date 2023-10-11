@@ -93,7 +93,7 @@ public class Enemy : MonoBehaviour
         Instantiate(explosion, transform.position, new Quaternion()).transform.localScale *=
             explosionScale;
         minimalRunTime -= 0.05f;
-        gm.DinoBoom();
+        gm.ElemantalBoom();
         Respawn();
     }
 

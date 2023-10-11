@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void DinoBoom()
+    public void ElemantalBoom()
     {
         scores += WalkinPrice;
 

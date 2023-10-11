@@ -3,9 +3,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using TMPro;
 
 public class Menu : MonoBehaviour
 {
+    [SerializeField]
+    private TextMeshProUGUI appName;
+
     [SerializeField]
     private Image soundIcon,
         vibroIcon;
@@ -17,6 +21,9 @@ public class Menu : MonoBehaviour
     [SerializeField]
     private RectTransform zeus;
 
+    [SerializeField]
+    private RectTransform howTo;
+
     private void Awake()
     {
         Application.targetFrameRate = 300;
@@ -27,6 +34,7 @@ public class Menu : MonoBehaviour
     {
         UpdateIcons();
         zeus.DOAnchorPosX(0, 0.4f).Play();
+        appName.text = Application.productName;
     }
 
     private void UpdateIcons()
@@ -42,13 +50,18 @@ public class Menu : MonoBehaviour
         UpdateIcons();
     }
 
-    public void Quit()
-    {
-        Application.Quit();
-    }
-
     public void StartGame()
     {
         SceneManager.LoadScene("GameScene");
+    }
+
+    public void ShowHow()
+    {
+        howTo.DOAnchorPosX(0, 0.5f).Play();
+    }
+
+    public void HideHow()
+    {
+        howTo.DOAnchorPosX(1500, 0.5f).Play();
     }
 }

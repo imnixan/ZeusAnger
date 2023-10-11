@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9147501093352865248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9147501093352865279}
+  - component: {fileID: 9147501093352865276}
+  - component: {fileID: 9147501093352865277}
+  - component: {fileID: 9147501093352865275}
+  - component: {fileID: -8090380445260951141}
+  m_Layer: 5
+  m_Name: Jerry
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &9147501093352865279
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9147501093352865248}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -600, y: -60}
+  m_SizeDelta: {x: 2000, y: 1050}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &9147501093352865276
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9147501093352865248}
+  m_CullTransparentMesh: 1
+--- !u!114 &9147501093352865277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9147501093352865248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 669c3d15d6f78ef4c94deb9ac2f0559c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!58 &9147501093352865275
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9147501093352865248}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 195
+--- !u!114 &-8090380445260951141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9147501093352865248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be2c4ddf15bf1e046a94725f3d4b65de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animSprites:
+  - {fileID: 21300000, guid: 669c3d15d6f78ef4c94deb9ac2f0559c, type: 3}
+  - {fileID: 21300000, guid: d956913e6a3da554bb38852715946721, type: 3}
+  - {fileID: 21300000, guid: e00684f4cb4d9004498c8930dde38544, type: 3}
+  - {fileID: 21300000, guid: f4047c21b9fa5ff4ba591d0adc311d66, type: 3}
+  - {fileID: 21300000, guid: d946943168503524cbd92c6f51ae2f0e, type: 3}
+  - {fileID: 21300000, guid: 9c1ce873f387497469374d5c59681c73, type: 3}
+  - {fileID: 21300000, guid: 439002d19e009a44a93aceb90e1fafdb, type: 3}
+  - {fileID: 21300000, guid: 7ba9a5c5882d4ff468b77ecf0a50a82c, type: 3}
+  - {fileID: 21300000, guid: a81c3628dfa92f740a72e607b8e237af, type: 3}
+  - {fileID: 21300000, guid: 290633d950ad6c545acdbe0a00c5d340, type: 3}
+  boomSounds:
+  - {fileID: 8300000, guid: 090f33e8ee84e0045a91595aca1e9610, type: 3}
+  - {fileID: 8300000, guid: 72b99ec5b7cf61a46b96dec5ee4b971d, type: 3}
+  - {fileID: 8300000, guid: 536b85c70ac81c04f9ee900945780352, type: 3}
+  - {fileID: 8300000, guid: 9325d589229ec4848a9ff45eff634cff, type: 3}
+  - {fileID: 8300000, guid: ff1be29d5a2aa364f890e07203b7fd11, type: 3}
+  scream: {fileID: 8300000, guid: 0484db2be9c88914eb542d2cffc28bb3, type: 3}
+  explosion: {fileID: 6192724089161036641, guid: e17d9a3f04750764c8c0a7a0461e4c3b, type: 3}

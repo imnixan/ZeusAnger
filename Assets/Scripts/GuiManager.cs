@@ -19,7 +19,8 @@ public class GuiManager : MonoBehaviour
     [SerializeField]
     private RectTransform endGameBanner,
         timerObj,
-        menuBtn;
+        menuBtn,
+        hpObj;
 
     [SerializeField]
     private Image star,
@@ -30,7 +31,7 @@ public class GuiManager : MonoBehaviour
     private Sprite recordSprite,
         winResult;
 
-    private const int GameTimer = 90;
+    private const int GameTimer = 30;
     private WaitForSeconds waitForSeconds;
     private GameManager gm;
 
@@ -72,8 +73,9 @@ public class GuiManager : MonoBehaviour
         finalScores.text = currentScores.text;
         finalBestScore.text = bestScores.text;
         endGameBanner.DOJumpAnchorPos(Vector2.zero, 50, 1, 0.5f).Play();
-        timerObj.DOJumpAnchorPos(Vector2.up * 500, 50, 1, 0.5f).Play();
-        menuBtn.DOJumpAnchorPos(Vector2.up * 500, 50, 1, 0.5f).Play();
+        timerObj.DOJumpAnchorPos(Vector2.right * 500, 50, 1, 0.5f).Play();
+        hpObj.DOJumpAnchorPos(Vector2.left * 500, 50, 1, 0.5f).Play();
+        menuBtn.DOJumpAnchorPos(Vector2.right * 500, 50, 1, 0.5f).Play();
         currentScores.transform.DOJump(Vector2.up * 500, 50, 1, 0.5f).Play();
         bestScores.transform.DOJump(Vector2.up * 500, 50, 1, 0.5f).Play();
         star.transform.DOJump(Vector2.up * 500, 50, 1, 0.5f).Play();
